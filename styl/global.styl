@@ -1,0 +1,1072 @@
+@import url('http://fonts.googleapis.com/css?family=Sigmar+One');
+@import url('http://fonts.googleapis.com/css?family=Varela+Round');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')
+
+
+/* VARIANBLES */
+fuente-titulo = 50px
+fuente-subtitulo = fuente-titulo * 50/100
+top-title = 50px
+top-subtitle = top-title + fuente-titulo + 20px
+
+*
+  margin 0
+  padding 0
+
+#css-zen-garden
+  /*background url('../img/sky.jpg') no-repeat
+  background-size 100%
+  background-attachment fixed
+  background-position 0 400px*/
+  font-family: 'Varela Round', sans-serif;
+  position absolute
+  color #34495e
+
+.intro
+  margin 0
+  padding 0
+
+header
+  height 400px
+  width 100%
+  & h1
+    font-family "Sigmar One"
+    font-size fuente-titulo
+    color: #fff
+    position absolute
+    top top-title
+    margin-left auto
+    margin-right auto
+    display block
+    text-align: center;
+
+    &:after
+      content ''
+      background url('../img/marte.png') no-repeat
+      height 400px
+      display block
+      -webkit-animation planeta-movimiento 10s infinite linear
+      -moz-animation planeta-movimiento 10s infinite linear
+      -o-animation planeta-movimiento 10s infinite linear
+      animation planeta-movimiento 10s infinite linear
+
+  & h2
+    font-family "Sigmar One"
+    font-size fuente-subtitulo
+    color: #fff
+    position absolute
+    top top-subtitle
+    margin-left auto
+    margin-right auto
+    display block
+    width: 100%;
+    text-align: center;
+    top: -280px;
+
+    & abbr
+      position relative
+      z-index: 2000;
+
+    &:before
+      content: "";
+      background: url('../img/tierra.png') no-repeat scroll 0% 0% transparent;
+      height: 400px;
+      display: block;
+      position: relative;
+      top: 400px;
+      z-index: 2000;
+      -webkit-animation tierra-movimiento 5s infinite linear
+      -moz-animation tierra-movimiento 5s infinite linear
+      -o-animation tierra-movimiento 5s infinite linear
+      animation tierra-movimiento 5s infinite linear
+
+    &:after
+      content: "";
+      background: url('../img/saturno.png') no-repeat scroll center center transparent;
+      height: 400px;
+      display: block;
+      position: relative;
+      top: -50px;
+      -webkit-animation planeta2-movimiento 20s infinite linear
+      -moz-animation planeta2-movimiento 20s infinite linear
+      -o-animation planeta2-movimiento 20s infinite linear
+      animation planeta2-movimiento 20s infinite linear
+
+header:before
+  content ''
+  background url('../img/background-stars.jpg')
+  height 400px
+  display block
+  -webkit-animation fondo-movimiento 5s infinite linear
+  -moz-animation fondo-movimiento 5s infinite linear
+  -o-animation fondo-movimiento 5s infinite linear
+  animation fondo-movimiento 5s infinite linear
+
+header:after
+  content ''
+  background url('../img/cohete.png') no-repeat
+  height 230px
+  display block
+  background-position center center
+  position: relative
+  top: -275px
+
+h3
+  font-family "Sigmar One"
+  font-size 30px
+  margin-bottom 20px
+
+.summary
+  background #e74c3c
+  font-family: 'Varela Round', sans-serif;
+  color #fff
+  padding 20px 20px 0 20px
+  font-size 20px
+  font-style italic
+  z-index 3000
+  position relative
+  box-sizing border-box
+  width 100%
+
+  & p
+    max-width 1400px
+    width 90%
+    margin 0 auto
+    text-align center
+    padding-bottom 20px
+
+    & a
+      color #2c3e50
+      text-decoration none
+      padding 0 5px
+
+      &:before
+        content '\f019'
+        font-family FontAwesome
+        font-style normal
+        text-ident 1.2em
+
+      &:hover
+        text-decoration underline
+
+  &:after
+    content ''
+    width 100%
+    height 20px
+    background #e74c3c + 50%
+    display block
+    position: absolute
+    left: 0
+
+.preamble
+  padding 100px 40px 90px 40px
+  background-color: rgba(236,240,241, 0.8);
+  position relative
+
+  &:after
+    content ''
+    display block
+    height 20px
+    background #34495e
+    width 100%
+    position absolute
+    left 0
+    bottom 0
+
+  & h3
+    color #E74C3C
+
+  & p
+    width 63%
+    line-height 30px
+    margin-bottom 20px
+    z-index 4000
+
+    &:nth-child(2):before
+      content ''
+      background url('../img/cow.png') no-repeat
+      background-size: 20% auto
+      background-position: center 300px
+      right: 0
+      position: absolute
+      width: 30%
+      height: 400px
+      top: 0
+      z-index 1000
+      -webkit-animation cow-movimiento 10s infinite linear
+      -moz-animation cow-movimiento 10s infinite linear
+      -o-animation cow-movimiento 10s infinite linear
+      animation cow-movimiento 10s infinite linear
+
+
+     &:nth-child(2):after
+      content ''
+      background url('../img/ovni.png') no-repeat
+      background-size 50% auto
+      background-position 270px 0
+      right 0
+      position absolute
+      width 40%
+      height 400px
+      top 0
+      z-index 2000
+      -webkit-animation ovni-movimiento 10s infinite
+      -moz-animation ovni-movimiento 10s infinite
+      -o-animation ovni-movimiento 10s infinite
+      animation ovni-movimiento 10s infinite
+
+.main
+  background #2ecc71
+  overflow hidden
+
+  & .explanation
+    padding 80px 10px 80px 40px
+
+  & .participation
+    padding 80px 40px 80px 10px
+
+  & .explanation, & .participation
+    width 50%
+    box-sizing border-box
+    float left
+    & p
+      line-height 30px
+      margin-top 20px
+    & h3
+      color #34495e
+    & a
+      color #34495e
+      text-decoration none
+      font-weight bold
+      &:hover
+        text-decoration underline
+
+  & .benefits
+    padding 80px 40px 20px 40px
+    position relative
+
+    &:before
+      content ''
+      display block
+      height 20px
+      background #f1c40f
+      box-sizing border-box
+      position absolute
+      top 0
+      left 0
+      width 100%
+
+    &:after
+      content '\f0c0'
+      font-family FontAwesome
+      display block
+      text-align center
+      font-size 100px
+      padding-top 60px
+
+  & .requirements
+    padding 20px 40px 80px 40px
+    & a
+      font-weight bold
+      color #ecf0f1
+      text-decoration none
+      &:hover
+        text-decoration underline
+    &:after
+      content '\f17b \00a0 \f13c \00a0 \f13b \00a0 \f179'
+      font-family FontAwesome
+      display block
+      text-align center
+      font-size 100px
+      padding-top 60px
+
+  & .benefits, & .requirements
+    width 100%
+    clear both
+    background #34495e
+    color #95a5a6
+    box-sizing border-box
+    & h3
+      color #f1c40f
+    & p
+      line-height 30px
+      margin-top 20px
+
+  & .explanation
+    padding-right 10px
+  & .participation
+      padding-left 10px
+
+  & .requirements
+    & p:last-child
+      padding-top 20px
+      width 70%
+      text-align center
+      margin auto
+
+      & a
+        color #f1c40f
+  & footer
+    height 100px
+    background #e74c3c
+    box-sizing border-box
+    position absolute
+    width 100%
+    text-align center
+
+    & a
+      display block
+      float left
+      font-size 20px
+      margin 50px 40px 0 40px
+      width 50px
+      color #ecf0f1
+      text-decoration none
+      &:hover
+        text-decoration underline
+
+    &:before
+      content ''
+      width 100%
+      height 20px
+      background #f3a69e
+      display block
+      position absolute
+      left 0
+
+    &:after
+      content '\f135'
+      font-family FontAwesome
+      position absolute
+      height 50px
+      font-size 50px
+      line-height 120px
+      right 40px
+      color #ecf0f1
+      -webkit-animation color-rocket 3s infinite linear
+      -moz-animation color-rocket 3s infinite linear
+      -o-animation color-rocket 3s infinite linear
+      animation color-rocket 3s infinite linear
+
+aside
+  & h3
+    color #e74c3c
+    font-size 20px
+
+  & .design-selection
+    position fixed
+    top 0
+    left -238px
+    z-index 6000
+    margin-right 10px
+    margin 20px 20px 20px 0
+    padding 20px
+    background rgba(255, 255, 255, 0.9)
+    border-radius 0 20px 20px 0
+    &:hover
+      -webkit-animation menu1 1s forwards
+      -moz-animation menu1 1s forwards
+      -o-animation menu1 1s forwards
+      animation menu1 1s forwards
+    & ul
+      list-style-type none
+    &:before
+      content '\f054'
+      color #ecf0f1
+      font-family FontAwesome
+      font-size 30px
+      position absolute
+      right -30px
+      top 50px
+      width 30px
+      height 100px
+      text-align center
+      line-height 100px
+      background-color rgba(231, 76, 60, 0.5)
+      border-radius 0 5px 5px 0
+      cursor pointer
+    & a.design-name
+      color #e74c3c
+      font-weight bold
+      text-decoration none
+      display block
+      &:hover
+        text-decoration underline
+    & a.designer-name
+      color #e74c3c
+      text-decoration none
+      margin-bottom 10px
+      display inline-block
+
+  & .design-archives
+    position fixed
+    top 150px
+    left -168px
+    z-index 5000
+    margin-right 10px
+    margin 20px 20px 20px 0
+    padding 20px
+    background rgba(255, 255, 255, 0.9)
+    border-radius 0 15px 15px 0
+    & h3
+      color #2ecc71
+    &:hover
+      -webkit-animation menu2 1s forwards
+      -moz-animation menu2 1s forwards
+      -o-animation menu2 1s forwards
+      animation menu2 1s forwards
+    & ul
+      list-style-type none
+    &:before
+      content '\f054'
+      color #ecf0f1
+      font-family FontAwesome
+      font-size 30px
+      position absolute
+      right -30px
+      top 17px
+      width 30px
+      height 100px
+      text-align center
+      line-height 100px
+      background-color rgba(46, 204, 113, 0.5)
+      border-radius 0 5px 5px 0
+      cursor pointer
+    & a
+      color #2ecc71
+      text-decoration none
+      display block
+      &:hover
+        text-decoration underline
+
+  & .zen-resources
+    position fixed
+    top 205px
+    left -223px
+    z-index 5000
+    margin-right 10px
+    margin 20px 20px 20px 0
+    padding 20px
+    background rgba(255, 255, 255, 0.9)
+    border-radius 0 15px 15px 0
+    & h3
+      color #9b59b6
+    &:hover
+      -webkit-animation menu3 1s forwards
+      -moz-animation menu3 1s forwards
+      -o-animation menu3 1s forwards
+      animation menu3 1s forwards
+    & ul
+      list-style-type none
+      & li
+        margin-bottom 10px
+    &:before
+      content '\f054'
+      color #ecf0f1
+      font-family FontAwesome
+      font-size 30px
+      position absolute
+      right -30px
+      top 80px
+      width 30px
+      height 100px
+      text-align center
+      line-height 100px
+      background-color rgba(155, 89, 182, 0.5)
+      border-radius 0 5px 5px 0
+      cursor pointer
+    & a
+      color #9b59b6
+      font-weight bold
+      text-decoration none
+      display block
+      &:hover
+        text-decoration underline
+
+@-webkit-keyframes menu1 {
+  from {
+    left -230px
+  }
+
+  to {
+    left 0
+  }
+}
+
+@-moz-keyframes menu1 {
+  from {
+    left -230px
+  }
+
+  to {
+    left 0
+  }
+}
+
+@keyframes menu1 {
+  from {
+    left -230px
+  }
+
+  to {
+    left 0
+  }
+}
+
+
+@-webkit-keyframes menu2 {
+  from {
+    left -165px
+  }
+
+  to {
+    left 0
+  }
+}
+
+@-moz-keyframes menu2 {
+  from {
+    left -165px
+  }
+
+  to {
+    left 0
+  }
+}
+
+@keyframes menu2 {
+  from {
+    left -165px
+  }
+
+  to {
+    left 0
+  }
+}
+
+@-webkit-keyframes menu3 {
+  from {
+    left -230px
+  }
+
+  to {
+    left 0
+  }
+}
+
+@-moz-keyframes menu3 {
+  from {
+    left -230px
+  }
+
+  to {
+    left 0
+  }
+}
+
+@keyframes menu3 {
+  from {
+    left -230px
+  }
+
+  to {
+    left 0
+  }
+}
+
+
+@-webkit-keyframes color-rocket {
+  0% {
+    color #ecf0f1
+  }
+  20% {
+    color #2ecc71
+  }
+  40% {
+    color #e74c3c
+  }
+  60% {
+    color #3498db
+  }
+  80% {
+    color #9b59b6
+  }
+  100% {
+    color #f1c40f
+  }
+}
+
+@-moz-keyframes color-rocket {
+  0% {
+    color #ecf0f1
+  }
+  20% {
+    color #2ecc71
+  }
+  40% {
+    color #e74c3c
+  }
+  60% {
+    color #3498db
+  }
+  80% {
+    color #9b59b6
+  }
+  100% {
+    color #f1c40f
+  }
+}
+
+@keyframes color-rocket {
+  0% {
+    color #ecf0f1
+  }
+  20% {
+    color #2ecc71
+  }
+  40% {
+    color #e74c3c
+  }
+  60% {
+    color #3498db
+  }
+  80% {
+    color #9b59b6
+  }
+  100% {
+    color #f1c40f
+  }
+}
+
+@-webkit-keyframes cow-movimiento {
+  0% {
+    background-position center 300px
+    background-size 20% auto
+  }
+
+  25% {
+    background-position center 300px
+    background-size 20% auto
+  }
+  60% {
+    background-position 175px 170px
+    background-size 0
+  }
+  100% {
+    background-size 0
+  }
+}
+
+@-moz-keyframes cow-movimiento {
+  0% {
+    background-position center 300px
+    background-size 20% auto
+  }
+
+  25% {
+    background-position center 300px
+    background-size 20% auto
+  }
+  60% {
+    background-position 175px 170px
+    background-size 0
+  }
+  100% {
+    background-size 0
+  }
+}
+
+@keyframes cow-movimiento {
+  0% {
+    background-position center 300px
+    background-size 20% auto
+  }
+
+  25% {
+    background-position center 300px
+    background-size 20% auto
+  }
+  60% {
+    background-position 175px 170px
+    background-size 0
+  }
+  100% {
+    background-size 0
+  }
+}
+
+
+@-webkit-keyframes ovni-movimiento {
+  0% {
+    background-position 600px 0
+  }
+
+  25% {
+    background-position 175px 170px
+  }
+  75% {
+    background-position 175px 170px
+  }
+  100% {
+    background-position 600px 0
+  }
+}
+
+@-moz-keyframes ovni-movimiento {
+  0% {
+    background-position 600px 0
+  }
+
+  25% {
+    background-position 175px 170px
+  }
+  75% {
+    background-position 175px 170px
+  }
+  100% {
+    background-position 600px 0
+  }
+}
+
+@keyframes ovni-movimiento {
+  0% {
+    background-position 600px 0
+  }
+
+  25% {
+    background-position 175px 170px
+  }
+  75% {
+    background-position 175px 170px
+  }
+  100% {
+    background-position 600px 0
+  }
+}
+
+
+@-webkit-keyframes tierra-movimiento {
+  from {
+    background-position 4000px 50px
+  }
+
+  to {
+    background-position -2000px 50px
+  }
+}
+
+@-moz-keyframes tierra-movimiento {
+  from {
+    background-position 4000px 50px
+  }
+
+  to {
+    background-position -2000px 50px
+  }
+}
+
+@keyframes tierra-movimiento {
+  from {
+    background-position 4000px 50px
+  }
+
+  to {
+    background-position -2000px 50px
+  }
+}
+
+@-webkit-keyframes planeta-movimiento {
+  from {
+    background-position 4000px 50px
+  }
+
+  to {
+    background-position -2000px 50px
+  }
+}
+
+@-moz-keyframes planeta-movimiento {
+  from {
+    background-position 4000px 50px
+  }
+
+  to {
+    background-position -2000px 50px
+  }
+}
+
+@keyframes planeta-movimiento {
+  from {
+    background-position 4000px 50px
+  }
+
+  to {
+    background-position -2000px 50px
+  }
+}
+
+@-webkit-keyframes planeta2-movimiento {
+  from {
+    background-position 3000px 40px
+  }
+
+  to {
+    background-position -1500px 40px
+  }
+}
+
+@-moz-keyframes planeta2-movimiento {
+  from {
+    background-position 3000px 40px
+  }
+
+  to {
+    background-position -1500px 40px
+  }
+}
+
+@keyframes planeta2-movimiento {
+  from {
+    background-position 3000px 40px
+  }
+
+  to {
+    background-position -1500px 40px
+  }
+}
+
+
+
+@-webkit-keyframes fondo-movimiento {
+  from {
+    background-position left center
+  }
+
+  to {
+    background-position -2000px center
+  }
+}
+
+@-webkit-keyframes cohete-movimiento {
+  0% {
+    background-position center center
+  }
+
+  25% {
+    background-position center -5px
+  }
+
+  50% {
+    background-position center center
+  }
+
+  75% {
+    background-position center 5px
+  }
+
+  100% {
+    background-position center center
+  }
+}
+
+@-moz-keyframes fondo-movimiento {
+  from {
+    background-position left center
+  }
+
+  to {
+    background-position -2000px center
+  }
+}
+
+@-moz-keyframes cohete-movimiento {
+  0% {
+    background-position center center
+  }
+
+  25% {
+    background-position center -5px
+  }
+
+  50% {
+    background-position center center
+  }
+
+  75% {
+    background-position center 5px
+  }
+
+  100% {
+    background-position center center
+  }
+}
+
+@keyframes fondo-movimiento {
+  from {
+    background-position left center
+  }
+
+  to {
+    background-position -2000px center
+  }
+}
+
+@keyframes cohete-movimiento {
+  0% {
+    background-position center center
+  }
+
+  25% {
+    background-position center -5px
+  }
+
+  50% {
+    background-position center center
+  }
+
+  75% {
+    background-position center 5px
+  }
+
+  100% {
+    background-position center center
+  }
+}
+
+.extra1
+  background url('../img/saturno.png')
+  height 400px
+  position absolute
+  top 0
+  z-index 100
+
+/* Zona para responsive web design */
+// Movil
+@media screen and (min-width: 120px)
+  header
+    & h1
+      font-size fuente-titulo - 20px
+      top top-title
+
+    & h2
+      font-size fuente-subtitulo - 10px
+      //top top-subtitle - 30px
+
+  header:after
+    height: 150px
+    background-size: 200px
+    top: -100px
+    -webkit-animation: cohete-movimiento 2.5s infinite linear
+    -moz-animation: cohete-movimiento 2.5s infinite linear
+    -o-animation: cohete-movimiento 2.5s infinite linear
+    animation: cohete-movimiento 2.5s infinite linear
+
+@media screen and (max-width: 320px)
+  header
+    width 320px
+    & h1
+      margin auto
+      width 100%
+      font-size 20px
+    & h2
+      width 320px
+      top -300px
+  header:after
+    height: 150px
+    background-size: 200px
+    top: -200px
+    -webkit-animation: cohete-movimiento 2.5s infinite linear
+    -moz-animation: cohete-movimiento 2.5s infinite linear
+    -o-animation: cohete-movimiento 2.5s infinite linear
+    animation: cohete-movimiento 2.5s infinite linear
+
+  .summary
+    max-width 320px
+    font-size .9em
+    box-sizing border-box
+
+  .preamble
+    width 320px
+    box-sizing border-box
+    & h3
+      font-size 20px
+    & p
+      width 100%
+      font-size 15px
+    & p:nth-child(2):after, & p:nth-child(2):before
+      display none
+
+  .main
+    max-width 320px
+    .explanation, .participation, benefits, requirements
+      width 100%
+      clear both
+      padding 80px 40px 0 40px
+    .participation
+      padding-bottom 40px
+    .requirements:after
+      font-size 40px
+
+    footer
+      height 150px
+      overflow hidden
+      & a
+        display block
+        width 100%
+        font-size 15px
+        text-align center
+        margin 0
+        padding 5px 0 5px 0
+      & a:firs-child
+        padding-top 40px
+@media screen and (min-width: 480px)
+  header:after
+    height: 200px
+    background-size: 250px
+    top: -200px
+    -webkit-animation: cohete-movimiento 2.5s infinite linear
+    -moz-animation: cohete-movimiento 2.5s infinite linear
+    -o-animation: cohete-movimiento 2.5s infinite linear
+    animation: cohete-movimiento 2.5s infinite linear
+  & h1
+    width 100%
+    text-align: center;
+
+@media screen and (min-width: 768px)
+  header
+    & h1
+      font-size fuente-titulo - 10px
+      top top-title
+
+    & h2
+      font-size fuente-subtitulo - 5px
+      //top top-subtitle - 20px
+
+  header:after
+    height: 230px
+    background-size: 300px
+    top: -200px
+    -webkit-animation: cohete-movimiento 2.5s infinite linear
+    -moz-animation: cohete-movimiento 2.5s infinite linear
+    -o-animation: cohete-movimiento 2.5s infinite linear
+    animation: cohete-movimiento 2.5s infinite linear
+
+@media screen and (min-width: 1024px)
+  header
+    & h1
+      font-size fuente-titulo
+      top top-title
+
+    & h2
+      font-size fuente-subtitulo
+      //top top-subtitle
+
+  header:after
+    height: 250px
+    background-size: 350px
+    top: -200px
+    -webkit-animation: cohete-movimiento 2.5s infinite linear
+    -moz-animation: cohete-movimiento 2.5s infinite linear
+    -o-animation: cohete-movimiento 2.5s infinite linear
+    animation: cohete-movimiento 2.5s infinite linear
+
